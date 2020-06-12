@@ -21,5 +21,8 @@ export class ItemsController {
         return `Name: ${createItemDto.name} Desc: ${createItemDto.description}`
     }
 
-
+    @Delete(':id')
+    delete(@Param('id') id): string {
+        return `Delete ${id}`
+    }
 }
