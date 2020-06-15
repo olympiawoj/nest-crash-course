@@ -23,4 +23,9 @@ export class ItemsService {
     findAll(): Item[] {
         return this.items
     }
+
+    // returns a single item
+    findOne(id: string): Item {
+        return this.items.find(item => item.id === id)
+    }
 }
